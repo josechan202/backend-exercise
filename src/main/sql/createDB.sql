@@ -1,0 +1,4 @@
+CREATE DATABASE staging;
+CREATE USER 'admin'@'%' IDENTIFIED BY 'admin';
+GRANT ALL PRIVILEGES ON student.* TO 'admin'@'%';
+FLUSH PRIVILEGES;
