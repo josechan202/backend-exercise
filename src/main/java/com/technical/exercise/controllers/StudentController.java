@@ -28,11 +28,11 @@ public class StudentController {
         return ResponseEntity.status(HttpStatus.CREATED).contentType(MediaType.APPLICATION_JSON).body(createdStudent);
     }
 
-    @PostMapping(value = "/{id}", consumes = "application/json", produces = "application/json")
+    @PutMapping(value = "/{id}")
     public ResponseEntity<Student> updateStudent(@PathVariable Long id, @RequestBody Student student) {
         student.setId(id);
-        Student createdStudent = studentService.saveStudent(student);
-        return new ResponseEntity<>(createdStudent, HttpStatus.ACCEPTED);
+        Student updatedStudent = studentService.saveStudent(student);
+        return new ResponseEntity<>(updatedStudent, HttpStatus.ACCEPTED);
     }
 
     @DeleteMapping(value = "/{id}")

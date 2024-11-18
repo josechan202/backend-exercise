@@ -18,21 +18,17 @@ public class Student implements Serializable {
     @Column(name = "id")
     private Long id;
 
-    @Column(name = "firstname")
-    @JsonProperty(access = JsonProperty.Access.READ_ONLY)
+    @Column(name = "firstName")
     private String firstName;
 
-    @Column(name = "lastname")
-    @JsonProperty(access = JsonProperty.Access.READ_ONLY)
+    @Column(name = "lastName")
     private String lastName;
 
     @Column(name = "age")
-    @JsonProperty(access = JsonProperty.Access.READ_ONLY)
     private Integer age;
 
     @Enumerated(EnumType.STRING)
     @Column(name = "sexuality")
-    @JsonProperty(access = JsonProperty.Access.READ_ONLY)
     private Sexuality sexuality;
 
     // Constructors
